@@ -12,7 +12,7 @@ package gameoop;
 public class Cavalry extends Personaje{
     public Cavalry()
     {
-        name = "Caballero";
+        name = "Caballerosssssssssssssssssssss";
         life = 80;
         attack =15;
         defense =12;
