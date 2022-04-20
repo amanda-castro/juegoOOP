@@ -19,12 +19,13 @@ public class Juego {
         Soldier soldado = new Soldier();
         Cavalry caballero = new Cavalry();
         Magician mago = new Magician();
-        GameUtil computadora = new GameUtil();
+        Personaje computadora = new Personaje();
+        
+        int num =0;
        switch(battle)
         {
             case "AD":{
                 System.out.println( "\nGuerrero vs Computadora" ) ; 
-                int num =0;
                 while(computadora.vive()&&soldado.vive())
                 {
                     num++;
@@ -46,7 +47,6 @@ public class Juego {
             
             case "BD":{
                 System.out.println( "\nCaballero vs Computadora" ) ; 
-                int num =0;
                 while(computadora.vive()&&caballero.vive())
                 {
                     num++;
@@ -68,7 +68,6 @@ public class Juego {
             
             case "CD":{
                 System.out.println( "\nMago vs Computadora" ) ; 
-                int num =0;
                 while(computadora.vive()&&mago.vive())
                 {
                     num++;
@@ -90,7 +89,6 @@ public class Juego {
             
             case "BA":{
                 System.out.println( "\nCaballero vs Guerrero" ) ; 
-                int num =0;
                 while(soldado.vive()&&caballero.vive())
                 {
                     num++;
@@ -112,7 +110,6 @@ public class Juego {
             
             case "CA":{
                 System.out.println( "\nMago vs Guerrero" ) ; 
-                int num =0;
                 while(soldado.vive()&&mago.vive())
                 {
                     num++;
@@ -134,7 +131,6 @@ public class Juego {
             
             case "AB":{
                 System.out.println( "\nGuerrero vs Caballero" ) ; 
-                int num =0;
                 while(caballero.vive()&&soldado.vive())
                 {
                     num++;
@@ -156,7 +152,6 @@ public class Juego {
             
             case "CB":{
                 System.out.println( "\nMago vs Caballero" ) ; 
-                int num =0;
                 while(caballero.vive()&&mago.vive())
                 {
                     num++;
@@ -178,7 +173,6 @@ public class Juego {
             
             case "AC":{
                 System.out.println( "\nGuerrero vs Mago" ) ; 
-                int num =0;
                 while(mago.vive()&&soldado.vive())
                 {
                     num++;
@@ -200,7 +194,6 @@ public class Juego {
             
             case "BC":{
                 System.out.println( "\nCaballero vs Mago" ) ; 
-                int num =0;
                 while(mago.vive()&&caballero.vive())
                 {
                     num++;

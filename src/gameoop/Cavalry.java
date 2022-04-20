@@ -9,7 +9,7 @@ package gameoop;
  *
  * @author amand
  */
-public class Cavalry extends GameUtil{
+public class Cavalry extends Personaje{
     public Cavalry()
     {
         name = "Caballero";

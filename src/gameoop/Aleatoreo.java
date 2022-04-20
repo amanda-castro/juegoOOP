@@ -16,15 +16,8 @@ public class Aleatoreo {
     public static boolean rndAtaque(double hr)
     {
         Random rnd = new Random();
-        boolean flag;
         int resultado = rnd.nextInt(100);
-        
-        if(resultado< (int)(hr*100)){
-            flag =true;
-        }else
-        {
-            flag =false;
-        }
+        boolean flag= (resultado< (int)(hr*100));
         
         return flag;
     }

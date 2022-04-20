@@ -7,7 +7,7 @@ package gameoop;
 
 /**
  *
- * @author amand
+ * @author Amanda Castro
  */
 
 /*
@@ -15,9 +15,9 @@ Programa:           GameOOP.Java
 Descripcion:        Juego de Roles en Java
 Programador:        Amanda Castro
 Fecha de Creacion:  01/02/2022
-Fecha de Revision:  
+Fecha de Revision:  20/04/2022
 */
-public class GameUtil {
+public class Personaje {
     String name = "Computadora";    //nombre
     int life =80;     //vida
     int attack=15;     //fuerza de ataque

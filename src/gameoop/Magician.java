@@ -9,7 +9,7 @@ package gameoop;
  *
  * @author amand
  */
-public class Magician extends GameUtil {
+public class Magician extends Personaje {
     public Magician()
     {
         name = "Mago";
