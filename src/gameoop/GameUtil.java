@@ -64,12 +64,12 @@ public class GameUtil {
         this.hr = _hr;
     }
     
-    
-    public void  metodo1( int _attack)
+    //Este metodo se realiza cuando el personaje recibe un ataque
+    public void  atacado( int _attack)
     {
         int hurt =0;
         int residualLife; //Vida restante
-        if(booleano1()){
+        if(vive()){
             if(this.attack>this.defense){
                 hurt = attack- defense;
             }
@@ -86,19 +86,20 @@ public class GameUtil {
         }
     }
     
-    public boolean booleano1()
+    //Este metodo sirve para verificar si el personaje vive
+    public boolean vive()
     {
-        boolean a = true;
+        boolean estado = true;
         if (this.life <=0)
         {
             System.out.println(this.name + " ha muerto... Fin del juego");
-            a = false;
+            estado = false;
         }
-        return a;
+        return estado;
     }
     
-    
-    public void metodo2()
+    //Este metodo funciona cuando se esquiva un golpe
+    public void evitar()
     {
         System.out.println("No hubo golpe... "+ this.name +" evitalo!!!");
     }
