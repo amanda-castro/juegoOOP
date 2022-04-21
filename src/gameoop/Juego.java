@@ -19,7 +19,7 @@ public class Juego {
         Soldier soldado = new Soldier();
         Cavalry caballero = new Cavalry();
         Magician mago = new Magician();
-        Personaje computadora = new Personaje();
+        Computer computadora = new Computer();
         
         int num =0;
        switch(battle)
