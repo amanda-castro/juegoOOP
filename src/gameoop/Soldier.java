@@ -20,7 +20,7 @@ public class Soldier extends GameUtil{
     }
 
     @Override
-    public void metodo2() {
+    public void esquivar() {
         System.out.println(this.name+" realizo un salto y escapo!"); //To change body of generated methods, choose Tools | Templates.
     }
     

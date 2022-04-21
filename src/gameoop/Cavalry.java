@@ -20,7 +20,7 @@ public class Cavalry extends GameUtil{
     }
 
     @Override
-    public void metodo2() {
+    public void esquivar() {
         System.out.println(this.name +" se inclino y escapo del ataque del oponente!!"); //To change body of generated methods, choose Tools | Templates.
     }
     

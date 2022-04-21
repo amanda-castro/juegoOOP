@@ -20,7 +20,7 @@ public class Magician extends GameUtil {
     }
 
     @Override
-    public void metodo2() {
+    public void esquivar() {
         System.out.println(this.name+" uso su varita magica y logro desviaar el ataque!!"); //To change body of generated methods, choose Tools | Templates.
     }
     
