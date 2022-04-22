@@ -17,7 +17,9 @@ Programador:        Amanda Castro
 Fecha de Creacion:  01/02/2022
 Fecha de Revision:  21/04/2022
 */
-public abstract class GameUtil {
+   
+    //Este metodo hace un chequeo a ver si alguno de los personajes murio
+public class GameUtil {
     String name = "Computadora";    //nombre
     int life =80;     //vida
     int attack=15;     //fuerza de ataque
@@ -64,8 +66,8 @@ public abstract class GameUtil {
         this.hr = _hr;
     }
     
-    //Metodo que se activa cuando el personaje ha sido atacado
-    public void  danhoRecibido( int _attack)
+    //Metodo que se activa cuando el personaje recibe un ataque
+    public void  danoRecibido( int _attack)
     {
         int hurt =0;
         int residualLife; //Vida restante
@@ -86,7 +88,6 @@ public abstract class GameUtil {
         }
     }
     
-    //Este metodo hace un chequeo a ver si alguno de los personajes murio
     public boolean estadoVida()
     {
         boolean vida = true;

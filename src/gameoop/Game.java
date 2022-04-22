@@ -1,25 +1,26 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package gameoop;
 
+import java.util.Scanner;
+
 /**
  *
- * @author amand
+ * @author Agustin
  */
 public class Game {
     public static void Start(String battle)
     {
-        //Variables inicializadas para la creacion de personajes
         Soldier soldado = new Soldier();
         Cavalry caballero = new Cavalry();
         Magician mago = new Magician();
-        Computer computadora = new Computer();
+        Computadora computadora = new Computadora();
+        Scanner scanner = new Scanner(System.in);
         switch(battle)
         {
-            case "AD":{
+            case "AD":{ 
                 System.out.println( "\nGuerrero vs Computadora" ) ; 
                 int num =0;
                 while(computadora.estadoVida()&&soldado.estadoVida())
@@ -27,16 +28,17 @@ public class Game {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(soldado.getHr())){
-                        computadora.danhoRecibido(soldado.getAttack());
+                        computadora.danoRecibido(soldado.getAttack());
                     }else{
                         computadora.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(computadora.getHr())){
-                        soldado.danhoRecibido(computadora.getAttack());
+                        soldado.danoRecibido(computadora.getAttack());
                     }else{
                         soldado.esquivar();
                     }
+                    scanner.nextLine();
                 }
                 break;
             }
@@ -49,13 +51,13 @@ public class Game {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(caballero.getHr())){
-                        computadora.danhoRecibido(caballero.getAttack());
+                        computadora.danoRecibido(caballero.getAttack());
                     }else{
                         computadora.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(computadora.getHr())){
-                        caballero.danhoRecibido(computadora.getAttack());
+                        caballero.danoRecibido(computadora.getAttack());
                     }else{
                         caballero.esquivar();
                     }
@@ -71,13 +73,13 @@ public class Game {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(mago.getHr())){
-                        computadora.danhoRecibido(mago.getAttack());
+                        computadora.danoRecibido(mago.getAttack());
                     }else{
                         computadora.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(computadora.getHr())){
-                        mago.danhoRecibido(computadora.getAttack());
+                        mago.danoRecibido(computadora.getAttack());
                     }else{
                         mago.esquivar();
                     }
@@ -85,21 +87,21 @@ public class Game {
                 break;
             }
             
-            case "BA":{
-                System.out.println( "\nCaballero vs Guerrero" ) ; 
+            case "BA":{ 
+                System.out.println( "\ncaballero vs Guerrero" ) ; 
                 int num =0;
                 while(soldado.estadoVida()&&caballero.estadoVida())
                 {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(caballero.getHr())){
-                        soldado.danhoRecibido(caballero.getAttack());
+                        soldado.danoRecibido(caballero.getAttack());
                     }else{
                         soldado.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(soldado.getHr())){
-                        caballero.danhoRecibido(soldado.getAttack());
+                        caballero.danoRecibido(soldado.getAttack());
                     }else{
                         caballero.esquivar();
                     }
@@ -115,13 +117,13 @@ public class Game {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(mago.getHr())){
-                        soldado.danhoRecibido(mago.getAttack());
+                        soldado.danoRecibido(mago.getAttack());
                     }else{
                         soldado.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(soldado.getHr())){
-                        mago.danhoRecibido(soldado.getAttack());
+                        mago.danoRecibido(soldado.getAttack());
                     }else{
                         mago.esquivar();
                     }
@@ -130,20 +132,20 @@ public class Game {
             }
             
             case "AB":{
-                System.out.println( "\nGuerrero vs Csoldadoallero" ) ; 
+                System.out.println( "\nGuerrero vs caballero" ) ; 
                 int num =0;
                 while(caballero.estadoVida()&&soldado.estadoVida())
                 {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(soldado.getHr())){
-                        caballero.danhoRecibido(soldado.getAttack());
+                        caballero.danoRecibido(soldado.getAttack());
                     }else{
                         caballero.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(caballero.getHr())){
-                        soldado.danhoRecibido(caballero.getAttack());
+                        soldado.danoRecibido(caballero.getAttack());
                     }else{
                         soldado.esquivar();
                     }
@@ -152,20 +154,20 @@ public class Game {
             }
             
             case "CB":{
-                System.out.println( "\nMago vs Csoldadoallero" ) ; 
+                System.out.println( "\nMago vs caballero" ) ; 
                 int num =0;
                 while(caballero.estadoVida()&&mago.estadoVida())
                 {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(mago.getHr())){
-                        caballero.danhoRecibido(mago.getAttack());
+                        caballero.danoRecibido(mago.getAttack());
                     }else{
                         caballero.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(caballero.getHr())){
-                        mago.danhoRecibido(caballero.getAttack());
+                        mago.danoRecibido(caballero.getAttack());
                     }else{
                         mago.esquivar();
                     }
@@ -181,13 +183,13 @@ public class Game {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(soldado.getHr())){
-                        mago.danhoRecibido(soldado.getAttack());
+                        mago.danoRecibido(soldado.getAttack());
                     }else{
                         mago.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(mago.getHr())){
-                        soldado.danhoRecibido(mago.getAttack());
+                        soldado.danoRecibido(mago.getAttack());
                     }else{
                         soldado.esquivar();
                     }
@@ -196,20 +198,20 @@ public class Game {
             }
             
             case "BC":{
-                System.out.println( "\nCaballero vs Mago" ) ; 
+                System.out.println( "\ncaballero vs Mago" ) ; 
                 int num =0;
                 while(mago.estadoVida()&&caballero.estadoVida())
                 {
                     num++;
                     System.out.println( "Ronda #"+num ) ;
                     if(ChequeoAciertos.tasaAciertos(caballero.getHr())){
-                        mago.danhoRecibido(caballero.getAttack());
+                        mago.danoRecibido(caballero.getAttack());
                     }else{
                         mago.esquivar();
                     }
                     
                     if(ChequeoAciertos.tasaAciertos(mago.getHr())){
-                        caballero.danhoRecibido(mago.getAttack());
+                        caballero.danoRecibido(mago.getAttack());
                     }else{
                         caballero.esquivar();
                     }
